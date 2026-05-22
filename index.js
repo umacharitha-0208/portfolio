@@ -295,8 +295,8 @@ window.addEventListener("scroll", () => {
 });
 
 // Contact form submission
-document
-  .getElementById("contactForm")
+const contactForm = document.getElementById("contactForm");
+if (contactForm) contactForm
   .addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -308,7 +308,7 @@ document
     const message = formData.get("message");
 
     // Create mailto link
-    const mailtoLink = `mailto:charithareddy0208@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:umacharitha.l23@iiits.in?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
